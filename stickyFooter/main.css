@@ -1,0 +1,26 @@
+/* Required to make the page 100% of window size. */
+ html, body {
+    height: 100%;
+}
+/* Not required but does remove normal browser margin/padding */
+ body {
+    margin: 0px;
+    padding: 0px;
+}
+/*The main container need sto be 100% high. 
+The reason for multiple height calls is for various browser support. */
+ div#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /*Here we set negative bottom margin based on height of the footer */
+    margin: 0px 0px -41px 0px;
+}
+/*Set height of footer wrapper */
+ div#footer_wrapper {
+    height: 41px;
+}
+/*It is necessary to add bottom padding to the last element/container within the main content section equal to the height of the footer so the footer doesn't come up and over content. */
+ div#content_wrapper {
+    padding: 0px 0px 41px 0px;
+}
